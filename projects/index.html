@@ -47,6 +47,25 @@
 
     <hr>
     <div class="col">
+        <h4>Exploring Generative Models in Hyperbolic Space</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-8" id="description">
+            <p>Hyperbolic space, a generally under-explored topic, is particularly interesting because unlike Euclidean space, hyperbolic space expands exponentially due to having negative curvature, which makes it much more interesting to explore and far less limiting to explore.</p>
+            <p>During summer 2021 I worked with Dr. Ryan Adams to develop a system for visualizing and exploring generative models in simulated hyperbolic space. I implemented a model, projection, and a <a href="https://en.wikipedia.org/wiki/Order-5_square_tiling" target="_blank">square tiling system</a> for hyperbolic space in OpenGL and connected the model with a PGAN for generating correlated images based on geodesic distance.</p>
+            <p>For my undergraduate senior thesis I extended this work by implementing it in Unity with a generalized tiling system and a text-to-image model (<a href="https://arxiv.org/abs/2111.13792" target="_blank">LAFITE</a>). I also ran simulated experiments to gauge the effectiveness of my system for finding imagined outputs from a model.</p>
+            <p>The public GitHub repo for this project is available <a href="https://github.com/rl27/MercatorUnity" target="_blank">here</a>. The Unity WebGL app is playable here: <a href="https://play.unity.com/mg/other/build-rj5-1" target="_blank">https://play.unity.com/mg/other/build-rj5-1</a></p>
+        </div>
+
+        <div class="col">
+            <img class="img-fluid" src="../assets/img/unity1.png" alt="Generated outputs in hyperbolic space">
+            <hr>
+            <img class="img-fluid" src="../assets/img/unity2.png" alt="A (5,7) hyperbolic tiling">
+        </div>
+    </div>
+
+    <hr>
+    <div class="col">
         <h4>Convolutional Transformers for Inertial Navigation</h4>
     </div>
     <div class="row">
@@ -74,24 +93,6 @@
 
         <div class="col">
             <img class="img-fluid" src="../assets/img/qcs_rud.png" alt="The QCS+RuD model.">
-        </div>
-    </div>
-
-    <hr>
-    <div class="col">
-        <h4>Generative Models in Hyperbolic Space</h4>
-    </div>
-    <div class="row">
-        <div class="col-sm-8" id="description">
-            <p>During summer 2021, I joined the <a href="https://lips.cs.princeton.edu/" target="_blank">Laboratory for Intelligent Probabilistic Systems</a> under Dr. Ryan Adams to develop a system for visualizing, exploring, and optimizing generative models in 3D hyperbolic space. I designed a model and projection of 3D hyperbolic space using OpenGL, and connected the model with a PGAN for generating correlated images based on geodesic distance. Currently I'm investigating applications of human-in-the-loop latent space optimization in this system.</p>
-            <p>Unlike normal Euclidean space, hyperbolic space expands exponentially due to having negative curvature, which makes it much more interesting to explore and far less limited than Euclidean space. However, this also makes it impossible to properly represent every coordinate in the hyperbolic world using floating-point numbers. My model of hyperbolic space uses a <a href="https://en.wikipedia.org/wiki/Order-5_square_tiling" target="_blank">square tiling system</a> so that it only needs to deal with coordinates local to the user.</p>
-            <p>The public GitHub repo for this project is available <a href="https://github.com/rl27/Mercator" target="_blank">here</a>.</p>
-        </div>
-
-        <div class="col">
-            <img class="img-fluid" src="../assets/img/disk3.png" alt="Hyperbolic space">
-            <hr>
-            <img class="img-fluid" src="../assets/img/disk.png" alt="Hyperbolic space">
         </div>
     </div>
 
