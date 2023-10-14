@@ -1,1 +1,1 @@
-Personal website: https://www.cs.princeton.edu/~rl27/
+Personal website: https://rl27.github.io
