@@ -24,7 +24,7 @@
     <body>
 
     <header>
-    <nav class="navbar navbar-expand-md py-0 navbar-dark bg-faded justify-content-center">
+    <nav class="navbar navbar-expand-md py-0 navbar-dark bg-faded justify-content-center" style="background-color: #8a2731;">
         <div class="row" id="wrapper">
             <a class="navbar-brand" href="#"><h3>Raymond Liu</h3></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -33,7 +33,6 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="p-2 nav-item active"><a class="nav-link" href=""><h5>About</h5></a></li>
-                    <li class="p-2 nav-item"><a class="nav-link" href="projects"><h5>Projects</h5></a></li>
                     <li class="p-2 nav-item"><a class="nav-link" href="assets/pdf/rl-cv.pdf" target="_blank"><h5>CV</h5></a></li>
                     <li class="p-2 nav-item"><a class="nav-link" href="https://github.com/rl27" target="_blank"><i class="fab fa-github" style="font-size:30px;"></i></a></li>
                     <li class="p-2 nav-item"><a class="nav-link" href="https://www.linkedin.com/in/raymondzl" target="_blank"><i class="fab fa-linkedin" style="font-size:30px;"></i></a></li>
@@ -52,9 +51,239 @@
             </div>
 		
             <div class="col-sm-7" id="description" style="padding-left:1vw;">
-                <p>Hi! I'm Raymond, and I'm a visiting researcher at Prof. Patrick Slade's Ability Lab at Harvard.</p>
-                <p>I'm currently developing a smartphone-based navigation assistant for the blind and visually impaired. To see my past projects, academic record, skills, and more, check out my <a href="assets/pdf/rl-cv.pdf" target="_blank">CV</a> (updated April 2023) or visit my <a href="https://rl27.github.io/projects/">projects page</a>.</p>
+                <p>Hi! I'm Raymond. I graduated from Princeton with a bachelor's in CS and I'm currently a visiting researcher at Prof. Patrick Slade's Ability Lab at Harvard.</p>
+                <p>I'm currently developing a smartphone-based navigation assistant for the blind and visually impaired. To see my past projects, academic record, skills, and more, check out my <a href="assets/pdf/rl-cv.pdf" target="_blank">CV</a> or scroll down.</p>
                 </p>
+            </div>
+        </div>
+
+        <hr>
+        <div class="col">
+            <h4>A Low-Cost and Accessible Navigation Tool for the Blind and Visually Impaired</h4>
+        </div>
+        <div class="row">
+            <div class="col" id="description">
+                <p>I am working with Prof. Patrick Slade at the <a href="https://ability.seas.harvard.edu/" target="_blank">Harvard Ability Lab</a> to develop a smartphone-based device to help blind and visually impaired people navigate. It is capable of full-body collision avoidance, turn-by-turn GPS navigation, and semantic segmentation of street scenes. We are also developing a haptic wheel to pair with the smartphone system.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <img class="img-fluid" src="assets/img/augcane_figure.png" alt="Figure">
+            </div>
+        </div>
+
+        <hr>
+        <div class="col">
+            <h4>Exploring Generative Models in Hyperbolic Space</h4>
+        </div>
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>Hyperbolic space, a generally under-explored topic, is particularly interesting because unlike Euclidean space, hyperbolic space expands exponentially due to having negative curvature, which makes it much more interesting to explore and far less limiting to explore.</p>
+                <p>During summer 2021 I worked with Dr. Ryan Adams to develop a system for visualizing and exploring generative models in simulated hyperbolic space. I implemented a model, projection, and a <a href="https://en.wikipedia.org/wiki/Order-5_square_tiling" target="_blank">square tiling system</a> for hyperbolic space in OpenGL and connected the model with a PGAN for generating correlated images based on geodesic distance.</p>
+                <p>For my undergraduate senior thesis I extended this work by implementing it in Unity with a generalized tiling system and a text-to-image model (<a href="https://arxiv.org/abs/2111.13792" target="_blank">LAFITE</a>). I also ran simulated experiments to gauge the effectiveness of my system for finding imagined outputs from a model.</p>
+                <p>The public GitHub repo for this project is available <a href="https://github.com/rl27/MercatorUnity" target="_blank">here</a>. The project paper is available <a href="assets/pdf/exploring_generative_models.pdf">here</a>. The Unity WebGL app is playable <a href="https://play.unity.com/mg/other/build-rj5-1" target="_blank">here</a> (although the server for the generative model may be down.)</p>
+            </div>
+
+            <div class="col">
+                <img class="img-fluid" src="assets/img/unity1.png" alt="Generated outputs in hyperbolic space">
+                <hr>
+                <img class="img-fluid" src="assets/img/unity2.png" alt="A (5,7) hyperbolic tiling">
+            </div>
+        </div>
+
+        <hr>
+        <div class="col">
+            <h4>Convolutional Transformers for Inertial Navigation</h4>
+        </div>
+        <div class="row">
+            <div class="col-sm-7" id="description">
+                <p>For my junior independent work at Princeton, I implemented neural network architectures that improve on existing state-of-the-art architectures on the task of inertial navigation. This task uses measurements from inertial measurement units (IMUs), which contain an accelerometer and a gyroscope, to predict an objects position. IMUs are cheap, ubiquitous, energy-efficient, and used in a wide variety of applications.</p>
+                <p>My models use a transformer encoder and incorporate convolutional layers to extract both global and local data relationships, and achieve better results than the previous best method.</p>
+                <p>The project paper is available <a href="assets/pdf/iw_report.pdf">here</a>, and the poster can be viewed <a href="assets/img/iw_poster.pdf">here</a>.</p>
+            </div>
+
+            <div class="col">
+                <img class="img-fluid" src="assets/img/cvit.png" alt="Ground truth and predicted trajectories from various models.">
+            </div>
+        </div>
+
+        <hr>
+        <div class="col">
+            <h4>OSCAR: Occluding Spatials, Category, And Region under discussion</h4>
+        </div>
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>For the final project for COS484 (Natural Language Processing) at Princeton, we reproduced a question-answering model and the ablations from <a href="https://aclanthology.org/2021.emnlp-main.390.pdf" target="_blank">this paper</a>. We additionally performed several of our own ablations, and tested using different models for generating question embeddings.</p>
+                <p>The code for this project is publicly available <a href="https://github.com/ind1010/Region-under-discussion-for-visual-dialog" target="_blank">here</a>.</p>
+                <p>The project paper is available <a href="assets/pdf/COS484_Report.pdf">here</a>, and the poster can be viewed <a href="assets/img/484poster.pdf">here</a>.</p>
+            </div>
+
+            <div class="col">
+                <img class="img-fluid" src="assets/img/qcs_rud.png" alt="The QCS+RuD model.">
+            </div>
+        </div>
+
+        <hr>
+        <div class="col">
+            <h4>Pedestrian Detection and Interpretability</h4>
+        </div>
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>For the final project for COS429 (Computer Vision) at Princeton, we investigated whether CNNs trained for object detections are reliant on visual cues when detecting pedestrians. We trained a Faster R-CNN on the Caltech Pedestrian Dataset, evaluated the model on different categories of pedestrian images, and improved the model by up-weighting images in poor-performing categories during training.</p>
+                <p>The code for this project is publicly available <a href="https://github.com/ind1010/pedestrian_detection_interpretability" target="_blank">here</a>.</p>
+                <p>The project paper is available <a href="assets/pdf/pedestrian_detection.pdf">here</a>, and the poster can be viewed <a href="assets/img/429poster.png">here</a>.</p>
+            </div>
+            <br>
+
+            <div class="col">
+                <img class="img-fluid" src="assets/img/caltech_pedestrian.png" alt="Pedestrians">
+                
+            </div>
+        </div>
+
+        <hr>
+        <div class="col">
+            <h4>Optical Flow</h4>
+        </div>
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>During summer 2020, I joined the <a href="https://pvl.cs.princeton.edu/" target="_blank">Princeton Vision & Learning Lab</a> to work on a visual learning project on optical flow. I helped develop and optimize a system for collecting human-annotated images.</p>
+                <p>These annotations are used to predict the ground truth optical flow for various scenes and videos.</p>
+            </div>
+            <br>
+
+            <div class="col">
+                <img class="img-fluid" src="assets/img/frame_0001.png" alt="Frame 1">
+                <hr>
+                <img class="img-fluid" src="assets/img/frame_0008.png" alt="Frame 8">
+                
+            </div>
+        </div>
+
+        <hr>
+        <div class="col">
+            <h4>Ray Tracing</h4>
+        </div>
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>During a summer internship at Oregon State University I created a simple ray tracer using C++. I implemented and tested methods for improving image rendering speed and making rendered images more realistic.</p>
+                <p>The top image is an output from an early version of the ray tracer that used simple methods such as antialiasing and reflection.</p>
+            </div>
+
+            <div class="col">
+                <img class="img-fluid" src="assets/img/rt_spheres.png" alt="Spheres">
+            </div>
+        </div>
+
+        </br>
+
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>The bottom image is an output that used more advanced techniques, such as Monte Carlo path tracing, to create more realistic lighting.</p>
+                <p>The public GitHub repo for this project is available <a href="https://github.com/rl27/ray-tracing" target="_blank">here</a>.</p>
+                <p>For more information and more images, the poster for my final project, which I presented at the University of Portland, can be viewed <a href="assets/pdf/rt_poster.pdf">here</a>. The presentation slides are available <a href="assets/pdf/physically_based_rendering.pptx">here</a>.</p>
+            </div>
+
+            <div class="col">
+                <img class="img-fluid" src="assets/img/path_tracing.png" alt="Path tracing">
+            </div>
+        </div>
+
+        <hr>
+        <div class="col">
+            <h4>Explainable Neural Networks</h4>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>During summer of 2019 I worked on a project at Oregon State University on explainable neural networks. This project aimed to explain the decision-making of deep neural nets for image recognition in terms of human concepts.</p>
+                <p>The program was trained to recognize and identify images of birds and then analyzed to see whether it focused on semantically meaningful concepts, such as "Eye" or "Crown" as in the image shown here.</p>
+                <p>The paper for this project is available <a href="https://arxiv.org/abs/1812.07150">here</a>.
+            </div>
+
+            <div class="col">
+                <img class="img-fluid" src="assets/img/xnn.png" alt="XNN">
+            </div>
+        </div>
+
+        <hr>
+        <div class="col">
+            <h4>Dementia Diagnosis</h4>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>Over the course of 2016 and early 2017 I helped develop a project that used deep convolutional neural nets to analyze MRI scans and attempt to diagnose various stages of dementia. My motivation for this project comes from my family's history of Alzheimer's.</p>
+                <p>By developing a technique that allowed the 3D MRI scans to each be split into hundreds of 2D "slices" as seen in the image, I was able to substantially improve the accuracy of the program.</p>
+                <p>The project was submitted to the 2017 Central Western Oregon Science Expo and the subsequent Intel Northwest Science Expo. The presentation poster can be viewed <a href="assets/pdf/isef_poster.pdf">here</a>.</p>
+            </div>
+                
+            <div class="col">
+                <img class="img-fluid" src="assets/img/mri_scan_1.png" alt="2D MRI scan">
+                <img class="img-fluid" src="assets/img/mri_scan_2.png" alt="2D MRI scan">
+                <hr>
+                <img class="img-fluid" src="assets/img/mri_scan_3.png" alt="2D MRI scan">
+            </div>
+        </div>
+       
+        <hr>
+        <div class="col">
+            <h4>Websites</h4>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>Aside from this website, I've developed other websites and concepts for websites. One example is <a href="https://airinchina.github.io/">airinchina.github.io</a>, which I created as an informative supplement for a high school project on air pollution in China.</p>
+                <p>A test website I created as a structure for my final project for Web Development (CS290) at OSU can be viewed <a href="assets/riddet">here</a>. Try the search bar!</p>
+            </div>
+                
+            <div class="col">
+                <a href="https://airinchina.github.io/" target="_blank"><img class="img-fluid" src="assets/img/airchina.png" alt="Air in China"></a>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>The most recent and the largest-scale website I've worked on so far is TigerTools, which I worked on alongside two of my classmates and friends, Indu Panigrahi and Adam Rebei. The website connects a simple and intuitive interface with a variety of APIs, allowing Princeton students to quickly locate on-campus amenities, such as printers, scanners, water filling stations, cafés, and vending machines.</p>
+            </div>
+                
+            <div class="col">
+                <img class="img-fluid" src="assets/img/tigertools.png" alt="TigerTools landing page">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>The code for this project is publicly available <a href="https://github.com/PrincetonUSG/TigerTools" target="_blank">here</a>.</p>
+                <p>The latest version of TigerTools is currently being hosted at <a href="https://www.tigerapps.org/#direct" target="_blank">TigerApps</a> (requires a Princeton account to access).</p>
+            </div>
+                
+            <div class="col">
+                <img class="img-fluid" src="assets/img/tigertools2.png" alt="TigerTools interface">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>Another website I've developed is named QTPod, which provides a web interface for users to listen to podcasts with advertisements automatically blocked. The advertisements are detected with speech recognition and removed.</p>
+            </div>
+                
+            <div class="col">
+                <img class="img-fluid" src="assets/img/qtpod_popular.png" alt="QTPod popular page">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8" id="description">
+                <p>The website was developed using the Express framework for Node.js, and MongoDB for the database.</p>
+                <p>The code for this website is available <a href="https://github.com/QTPod/qtpod-site" target="_blank">here</a>.</p>
+            </div>
+                
+            <div class="col">
+                <img class="img-fluid" src="assets/img/qtpod_single.png" alt="Podcast interface">
             </div>
         </div>
 
